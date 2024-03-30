@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Account - Erica </title>
+    <link rel="stylesheet" href="/Erica.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="\pic/icon.png"
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<body>
+
+    
+
+    
+    <div class="container">
+        <div class="navbar">
+        <div class="logo">
+            <img src="/pic/erica.png" width="400px">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="/Erica.html">Home</a></li>
+                <li><a href="/About.html">About</a></li>
+                <li><a href="#down">Contact</a></li>
+                <li><a href="/index.html">Account</a></li>
+            </ul>
+        </nav>
+        <img src="/pic/images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+</div>
+
+
+<!------account page-->
+<div class="account-page">
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="\pic\images\image1.png" width="100%">
+
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="frd">
+                        </div>
+                        <form id="Login" action="/authenticate" method="post">
+                            <input type="text" id="username" name="username"placeholder="Username">
+                            <input type="password" id="password" name="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+                    
+                    
+                        <form id="Register" action="/register" method="post">
+                        
+                        
+                            <input type="text" id="username" name="username"placeholder="Username">
+                            <input type="email" id="email" name="email" placeholder="Email">
+                            <input type="password" id="password" name="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        
+                        
+                        </form>
+                    
+                    
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+<!-----end account page-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="/About.html">About me</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Baggage</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">Flight status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Book</h4>
+                <ul>
+                    <li><a href="#">Book flights</a></li>
+                    <li><a href="#">Search for flights</a></li>
+                    <li><a href="#">Planning your trip</a></li>
+                    <li><a href="#">Transportation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/ssarahsafii/"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+
+        </div> 
+ 
+    </div>
+
+</footer>
+
+
+
+
+
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px"){
+            MenuItems.style.maxHeight="200px";
+        }
+        else{
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+</script>
+
+<!--js for account-->
+
+<script>
+    var Login = document.getElementById("Login");
+    var Register = document.getElementById("Register");
+    var frd = document.getElementById("frd");
+
+
+    function register(){
+        Register.style.transform= "translateX(0px)";
+        Login.style.transform= "translateX(0px)";
+        frd.style.transform= "translateX(100px)";
+    }
+
+    function login(){
+        Register.style.transform= "translateX(300px)";
+        Login.style.transform= "translateX(300px)";
+        frd.style.transform= "translateX(0px)";
+    }
+</script>
+
+</body> 
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
